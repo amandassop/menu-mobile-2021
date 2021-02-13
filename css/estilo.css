@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    background-image:linear-gradient(to bottom,#026ddc,#109bc6,#1bc0b4);
+    background-repeat: no-repeat;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: -80%;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: left 1s, opacity 1s;
+   
+
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    /* border: 2px solid red; */
+    width: 70%;
+    height: 60%;
+    
+}
+
+nav ul li{
+    padding: 15px 10px;
+    list-style: none;
+    border-left: 2px dotted #1bc0b4;
+    color: gray;
+    font-size: 20px;
+    font-family: 'Barlow', sans-serif;
+    
+}
+
+#abre-fecha{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: none;   
+}
+
+#abre-fecha:checked ~ #fecha{
+    right:calc(20% + 10px);
+  
+   
+    
+}
+
+/* input type checkbox */
+#abre-fecha:checked ~ nav{
+    left: 0;
+    opacity: 0.95;
+}
+
+#abre{
+    position: fixed;
+    top: calc(50% - 30px);
+    left: 0;
+    background-color: #02044b;
+    border: 1px solid #02044b;
+    z-index: 1;
+}
+
+#fecha{
+    position:fixed;
+    top: 10px;
+    right: -50px;
+    z-index: 3;
+    background-color: #005a83;
+    border: 1px solid #005a83;
+    transition: right 0.4s;
+    
+   
+}
+
+/* ICONES */
+    .btn-icon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 2px 12px;
+}
+
+
+
+
+
+
